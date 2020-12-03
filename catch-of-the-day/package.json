@@ -8,15 +8,16 @@
   },
   "dependencies": {
     "autoprefixer-stylus": "0.14.0",
-    "firebase": "^5.7.0",
+    "firebase": "^8.0.1",
     "prop-types": "^15.6.0",
     "re-base": "4.0.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-router-dom": "^4.2.2",
     "react-transition-group": "^2.2.1",
-    "serve": "^10.1.1",
-    "stylus": "0.54.5"
+    "serve": "^11.0.0",
+    "stylus": "0.54.5",
+    "snyk": "^1.434.0"
   },
   "scripts": {
     "dev": "react-scripts start",
@@ -26,11 +27,14 @@
     "eject": "react-scripts eject",
     "styles": "stylus -u autoprefixer-stylus ./src/css/style.styl -o ./src/css/style.css",
     "now-build": "npm run build && mv build dist",
-    "styles:watch": "npm run styles -- -w"
+    "styles:watch": "npm run styles -- -w",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "browserslist": [
     ">0.2%",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "snyk": true
 }
